@@ -1,0 +1,112 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculator" >
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="250dp"
+        android:layout_column="0"
+        android:background="@drawable/borderframe">
+
+      <TextView
+        android:id="@+id/txtAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_amount" />
+      
+     <EditText
+         android:id="@+id/edtAmount"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/txtAmount"
+         android:ems="5"
+         android:hint="@string/amount_default" />
+     
+  <TextView
+        android:id="@+id/txtTipPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@+id/txtAmount"
+        android:layout_below="@+id/edtAmount"
+        android:text="@string/lbl_choose_tip" />
+
+     <NumberPicker
+         android:id="@+id/tipPicker"
+         android:layout_width="30dp"
+         android:layout_height="100dp"
+         android:layout_alignLeft="@+id/edtAmount"
+         android:layout_below="@+id/txtTipPicker"
+         android:theme="@style/android:Theme"
+      />
+
+     <!-- style="@style/cust_dialog" -->
+     
+    </RelativeLayout>
+
+
+	<RelativeLayout
+	    android:layout_width="140dp"
+	    android:layout_height="130dp"
+	    android:layout_column="1"
+	    android:layout_marginTop="50dp"
+	    android:layout_marginLeft="20dp"
+	    android:background="@drawable/borderframe">
+    
+	 <TextView
+	     android:id="@+id/txtTip"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:text="@string/lbl_tip"
+	     android:textSize="16sp"
+	     android:layout_marginLeft="5dp"
+	     android:layout_marginTop="10dp"
+	     android:textStyle="bold"
+	      />
+	 
+	<TextView
+	     android:id="@+id/txtTipValue"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:text="@string/total_default"
+	     android:layout_toRightOf="@+id/txtTip"
+	     android:textSize="16sp"
+	     android:layout_alignTop="@+id/txtTip"
+	     android:layout_marginLeft="5dp"
+	     android:textStyle="bold"
+	  />
+	 
+	<TextView
+	     android:id="@+id/txtTotal"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_below="@+id/txtTip"
+	     android:text="@string/lbl_total"
+	     android:textSize="16sp"
+	     android:layout_marginLeft="5dp"
+	     android:layout_marginTop="40dp"
+	     android:textStyle="bold"
+	 />
+	 
+	<TextView
+	     android:id="@+id/txtTotalValue"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:text="@string/total_default"
+	     android:layout_toRightOf="@+id/txtTotal"
+	     android:layout_alignTop="@+id/txtTotal"
+	     android:textSize="16sp"
+	     android:layout_marginLeft="5dp"
+	     android:textStyle="bold"
+	  />
+	  
+	 </RelativeLayout>
+	
+</GridLayout>
